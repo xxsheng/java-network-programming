@@ -1,7 +1,6 @@
-package runnable;
+package thread.runnable;
 
 import org.junit.Test;
-import thread.DigestThread;
 
 import javax.xml.bind.DatatypeConverter;
 import java.io.FileInputStream;

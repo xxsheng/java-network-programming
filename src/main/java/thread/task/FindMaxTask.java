@@ -1,4 +1,4 @@
-package task;
+package thread.task;
 
 import java.util.concurrent.Callable;
 
