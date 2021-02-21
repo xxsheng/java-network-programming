@@ -9,7 +9,7 @@ import java.nio.channels.WritableByteChannel;
 
 public class ClientSocket {
 
-    public static final int DEFAULT_PORT = 19;
+    public static final int DEFAULT_PORT = 29;
 
     public static void main(String[] args) {
         if (args.length == 0) {
@@ -26,8 +26,10 @@ public class ClientSocket {
 
         try {
             InetSocketAddress inetSocketAddress = new InetSocketAddress(args[0], port);
+            InetSocketAddress inetSocketAddress1 = new InetSocketAddress(args[0], 19);
             SocketChannel socketChannel = SocketChannel.open();
             socketChannel.bind(inetSocketAddress);
+            boolean connect = socketChannel.connect(inetSocketAddress1);
 
             ByteBuffer allocate = ByteBuffer.allocate(74);
             WritableByteChannel writableByteChannel = Channels.newChannel(System.out);
